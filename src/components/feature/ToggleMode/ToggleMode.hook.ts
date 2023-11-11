@@ -1,31 +1,27 @@
-import {
-  Half2Icon,
-  MagicWandIcon,
-  MoonIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
-import { IconType } from "./ToggleMode.type";
-import { isThemeValid } from "./ToggleMode.util";
+import { Half2Icon, MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { useTheme } from 'next-themes';
+
+import { IconType } from './ToggleMode.type';
+import { isThemeValid } from './ToggleMode.util';
 
 const useToggleMode = () => {
   const { setTheme, theme } = useTheme();
 
   const handleChangeTheme = {
     dark() {
-      setTheme("dark");
+      setTheme('dark');
     },
     light() {
-      setTheme("light");
+      setTheme('light');
     },
     system() {
-      setTheme("system");
+      setTheme('system');
     },
   };
   const checked = {
-    system: theme === "system",
-    light: theme === "light",
-    dark: theme === "dark",
+    system: theme === 'system',
+    light: theme === 'light',
+    dark: theme === 'dark',
   };
   const ToggleIcon: IconType = isThemeValid(theme)
     ? ({ dark: MoonIcon, light: SunIcon, system: Half2Icon }[
@@ -33,8 +29,9 @@ const useToggleMode = () => {
       ] as IconType)
     : Half2Icon;
   const themeMode = isThemeValid(theme)
-    ? { system: "OS Default", light: "Light", dark: "Dark" }[theme as string]
-    : "OS Default";
+    ? { system: 'OS Default', light: 'Light', dark: 'Dark' }[theme as string]
+    : 'OS Default';
+
   return {
     handleChangeTheme,
     checked,

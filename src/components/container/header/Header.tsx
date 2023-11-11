@@ -1,5 +1,4 @@
-import { ToggleMode } from "@/components/feature";
-import React from "react";
+import { ToggleMode } from '@/components/feature';
 
 const Header = () => {
   return (

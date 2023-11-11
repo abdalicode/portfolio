@@ -1,9 +1,9 @@
-"use client";
-import { FC, useEffect, useState } from "react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { type ThemeProviderProps } from "next-themes/dist/types";
+'use client';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { type ThemeProviderProps } from 'next-themes/dist/types';
+import { FC, useEffect, useState } from 'react';
 
-const ThemeProvider: FC<Pick<ThemeProviderProps, "children">> = ({
+const ThemeProvider: FC<Pick<ThemeProviderProps, 'children'>> = ({
   children,
 }) => {
   const [mounted, setMounted] = useState(false);
