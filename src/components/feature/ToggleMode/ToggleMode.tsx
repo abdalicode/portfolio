@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+
 import {
   Button,
   DropdownMenu,
@@ -10,13 +11,12 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/common";
+} from '@/components/common';
 
-import useToggleMode from "./ToggleMode.hook";
+import useToggleMode from './ToggleMode.hook';
 
 function ToggleMode() {
   const { checked, handleChangeTheme, ToggleIcon, themeMode } = useToggleMode();
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

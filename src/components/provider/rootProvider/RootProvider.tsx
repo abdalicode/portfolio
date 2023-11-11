@@ -1,6 +1,8 @@
-import { TooltipProvider } from "@/components/common";
-import React, { FC, ReactNode } from "react";
-import { ThemeProvider } from "../themeProvider";
+import React, { FC, ReactNode } from 'react';
+
+import { TooltipProvider } from '@/components/common';
+
+import { ThemeProvider } from '../themeProvider';
 
 const RootProvider: FC<{ children?: ReactNode }> = ({ children }) => {
   return (

@@ -1,6 +1,8 @@
-import React, { FC } from "react";
-import { MainLayoutProps } from "./MainLayout.type";
-import { Header } from "@/components/container";
+import React, { FC } from 'react';
+
+import { Header } from '@/components/container';
+
+import { MainLayoutProps } from './MainLayout.type';
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
