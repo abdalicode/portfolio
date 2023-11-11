@@ -9,7 +9,8 @@
     "plugin:prettier/recommended",
     "plugin:jest/recommended",
     "plugin:testing-library/react",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "plugins": [
     "react",
@@ -47,7 +48,10 @@
           "index"
         ],
         "newlines-between": "always",
-        "alphabetize": { "order": "asc", "caseInsensitive": true }
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
       }
     ],
     "prettier/prettier": ["error"]
