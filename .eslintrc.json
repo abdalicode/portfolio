@@ -1,18 +1,23 @@
 {
-  "extends": [ 
-  "eslint:recommended",
-  "plugin:react/recommended",
-  "plugin:react-hooks/recommended",
-  "plugin:jsx-a11y/recommended",
-  "next",
-  "next/core-web-vitals",
-   "plugin:prettier/recommended",
-  "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/react",
+    "prettier"
+  ],
   "plugins": [
     "react",
     "react-hooks",
     "unused-imports",
     "jsx-a11y",
+    "jest",
+    "testing-library",
     "import",
     "prettier"
   ],
@@ -21,15 +26,30 @@
     "react/prop-types": "off",
     "no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
-		"unused-imports/no-unused-vars": [
-			"warn",
-			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-		],
-    "import/order": ["error", {
-      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-      "newlines-between": "always",
-      "alphabetize": { "order": "asc", "caseInsensitive": true }
-    }],
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
     "prettier/prettier": ["error"]
   },
   "settings": {
