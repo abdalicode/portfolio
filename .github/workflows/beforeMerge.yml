@@ -1,0 +1,28 @@
+name: Before merge test
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  beforeMergeTest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm i -g pnpm
+        name: Install pnpm
+      - run: pnpm install
+        name: install dependencies.
+      - run: pnpm lint
+        name: Lint Check
+      - run: pnpm test
+        name: test
+      - run: pnpm build
+        name: Build check
